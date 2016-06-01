@@ -1,0 +1,287 @@
+//@font-face {
+//  font-family: 'FontAwesome';
+//  src: url('fonts/fontawesome-webfont.eot');
+//  /* IE9 Compat Modes */
+//  src: url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//  url('fonts/fontawesome-webfont.woff') format('woff'), /* Modern Browsers */
+//  url('fonts/fontawesome-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+//  url('fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+//  /* Legacy iOS */
+//  font-weight: normal;
+//  font-style: normal;
+//}
+/*
+KISSY CSS Reset
+理念：清除和重置是紧密不可分的
+特色：1.适应中文 2.基于最新主流浏览器
+维护：玉伯(lifesinger@gmail.com), 正淳(ragecarrier@gmail.com)
+*/
+/* 清除内外边距 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+ul,
+li,
+button,
+input,
+textarea,
+th,
+td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+}
+/* 设置默认字体 */
+body * {
+  /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+  font-size: 14px;
+  font-family:"Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+h1 {
+  font-size: 18px;
+  /* 18px / 12px = 1.5 */
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+em,
+var {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: "Courier New", Courier, monospace;
+}
+/* 统一等宽字体 */
+small {
+  font-size: 12px;
+}
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul,
+ol {
+  list-style: none;
+}
+/* 重置文本格式元素 */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+abbr[title],
+acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+/* 重置表单元素 */
+legend {
+  color: #000;
+}
+/* for ie6 */
+fieldset,
+img {
+  border: none;
+}
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 使得表单元素在 ie 下能继承字体大小 */
+}
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+  overflow-y: scroll;
+}
+
+/*html5*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+/*滚动条*/
+::-webkit-scrollbar-track-piece{
+  -webkit-border-radius:0;
+}
+::-webkit-scrollbar{
+  width:5px;
+  height:5px;
+}
+::-webkit-scrollbar-thumb{
+  height:50px;
+  background-color: #878787;
+  -webkit-border-radius:2px;
+  outline-offset:-1px;
+  border: 2px solid #737373;
+}
+::-webkit-scrollbar-thumb:hover{
+  height:50px;
+  background-color: #5c5c5c;
+  -webkit-border-radius:4px;
+}
+
+body {
+  scrollbar-arrow-color:#737373; /*三角箭头的颜色*/
+  scrollbar-face-color:#5c5c5c; /*立体滚动条的颜色（包括箭头部分的背景色）*/
+  scrollbar-3dlight-color:#878787; /*立体滚动条亮边的颜色*/
+  scrollbar-highlight-color:#878787; /*滚动条的高亮颜色（左阴影？）*/
+  scrollbar-shadow-color:#878787; /*立体滚动条阴影的颜色*/
+  scrollbar-darkshadow-color:#878787; /*立体滚动条外阴影的颜色*/
+  scrollbar-track-color:#737373; /*立体滚动条背景颜色*/
+  scrollbar-base-color:#878787; /*滚动条的基色*/
+}
+
+input {
+  border: 1px solid @c-button;
+  outline: none;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+button, .button {
+  padding: 10px 20px;
+  color: @c-light-0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline:none;
+}
+
+a {
+  color: @c-dark-2;
+}
+
+ul {
+  margin-left: 0;
+}
+ul li {
+  list-style: none;
+}
+
+//body.loading > * {
+//  display: none;
+//}
+
+//body::before {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background-position: center center;
+//  background-repeat: no-repeat;
+//  background-size: 64px 64px;
+//  z-index: 0;
+//  content: '';
+//  display: -webkit-box;
+//  -webkit-box-pack: center;
+//  -webkit-box-align: center;
+//  padding-top: 48px;
+//  transition: all 200ms;
+//  color: white;
+//}
+
+//body.loading::before {
+//  background-color: rgba(139, 139, 139, 0.6);
+//  background-image: url(../images/loading.svg);
+//  content: '努力加载中...';
+//  z-index: 999999;
+//}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(74, 74, 74, 0.8);
+  padding: 5px 10px;
+  border-radius: 2px;
+  -ms-border-radius: 2px;
+  color: #fff;
+  z-index: 99999;
+  max-width: 480px;
+}
+
+.tooltip * {
+  color: #fff;
+}
+
+.tooltip > b {
+  font-size: 16px;
+}
+
+.clr-float::after {
+  /*==for FF/chrome/opera/IE8==*/
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  /*==for IE6/7 Maxthon2==*/
+  zoom: 1;
+}
+.fa::before {
+  margin-right: 5px;
+}
+
+@c-color: #3d3d3d;
+
+@c-done: #61aef5;
+@c-undone: #828282;
+
+@c-light-0: #ffffff;
+@c-light-1: #3d3d3d;
+@c-light-2: #e2e2e2;
+@c-weak-0: #f9f9f9;
+@c-dark-0: #000000;
+@c-dark-1: #505050;
+@c-dark-2: #828282;
+
+@c-warning: #ffff66;
+@c-warning: #c90000;
+
+@c-selected: #e3007a;
+@c-focus: #e30ba5;
+
+@c-ok: #0eabf4;
+
+@c-border: rgba(0, 0, 0, 0.18);
+@c-border-sub: rgba(0, 0, 0, .05);
+
+@c-mask-dark: rgba(0, 0, 0, .6);
+@c-mask-light: rgba(255, 255, 255, .75);
+
+@c-button: #a3a3a3;
+@c-button-hover: #505050;
